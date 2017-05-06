@@ -1,0 +1,45 @@
+{
+  "name": "to-do-vue-js",
+  "version": "1.0.0",
+  "description": "A tool base on vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "build": "webpack"
+  },
+  "keywords": [
+    "todo",
+    "vue.js"
+  ],
+  "author": "dengjianxin",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.23.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.1",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.0.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "vue": "^2.3.2",
+    "vue-hot-reload-api": "^2.1.0",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^12.0.3",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.2",
+    "vuex": "^2.3.1",
+    "webpack": "^2.4.1",
+    "webpack-md5-hash": "0.0.5",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "vuex": "^2.3.1"
+  }
+}
