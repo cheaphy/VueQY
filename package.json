@@ -4,6 +4,7 @@
   "description": "A tool base on vue.js",
   "main": "index.js",
   "scripts": {
+    "server": "node ./src/js/server/index.js",
     "test": "jasmine",
     "build": "webpack"
   },
@@ -40,6 +41,7 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "vuex": "^2.3.1"
   }
 }
