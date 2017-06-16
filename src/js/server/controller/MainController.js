@@ -1,9 +1,13 @@
-import "./BaseController"
+const BaseController = require("./BaseController");
 
-export default class extends BaseController {
+class Controller extends BaseController {
     init(){
-        this.html("/", function(){
-
+        this.html("/json", function(req, res){
+            res.json({
+                test: "name"
+            });
         });
     }
 }
+
+module.exports = exports = Controller;

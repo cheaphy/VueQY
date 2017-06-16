@@ -1,5 +1,5 @@
-export default class {
-    load(map){
+class Controller{
+    constructor(map){
         this.map = map;
         this.init();
         return this;
@@ -60,3 +60,5 @@ export default class {
     }
 
 }
+
+module.exports = exports = Controller;

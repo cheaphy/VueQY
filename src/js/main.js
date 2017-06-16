@@ -4,25 +4,14 @@ import Vue from 'vue'
 import store from "./store"
 import header from "./component/header.vue"
 
-
-
 var vm = new Vue({
-    template: "<div><UIHeader></UIHeader></div>",
+    template: `<div>
+        <UIHeader></UIHeader>
+    </div>`,
     components: {UIHeader: header},
     data: {
         message: "test"
     }
 });
 
-vm.$mount("#main")
-
-
-// var App = new Vue.extend({
-//     template: "<div><UIHeader></UIHeader></div>",
-//     components: {UIHeader: header},
-//     data:{
-//         message:'test success!'
-//     }
-// });
-
-// App().$mount("#main");
+vm.$mount("#main");

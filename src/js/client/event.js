@@ -19,7 +19,7 @@ export default {
         }
     },
     off: function(element, name, handler){
-        if(element && element.nodeType === 3){
+        if(isGoodNode(element)){
             if(element.removeEventListener){
                 element.removeEventListener(name, handler);
             }

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="topNavWrap-player">
-            <div class="navPlayer topNav-player" style="position:relative">
+        <div class="topNavWrap-player" v-global-scroll="onScroll">
+            <div class="navPlayer topNav-player" style="position:relative"  v-global-scroll="onScroll">
                 <div class="navcont clearfix">
                     <ui-logo></ui-logo>
                     <div class="topNavMid">
@@ -9,7 +9,7 @@
                             <a href="http://www.iqiyi.com/" title="返回爱奇艺首页" alt="返回爱奇艺首页"></a>
                         </div>
                         <div class="dhBox">
-                            <div :class="['dhGuild', isShowNavList ? 'dhGuild_hover': '']" @click="onSwitchItemClick">
+                            <div :class="['dhGuide', isShowNavList ? 'dhGuide_hover': '']" @click="onNavSwitchClick" v-global-close="onHide">
                                 <div>导航</div>
                             </div>
                             <div class="ydBox">
@@ -41,6 +41,7 @@
                             <!-- app download end -->
                         </div>
                     </div>
+                    <ui-login />
                 </div>
             </div>
         </div>
@@ -49,12 +50,14 @@
 
 <script>
 import uiLogo from "./ui/uiLogo.vue"
+import uiLogin from "./ui/uiLogin.vue"
+import "../directive/globalClose.js"
+import "../directive/globalScroll.js"
 
 export default {
     name: 'header',
-    components: { uiLogo },
+    components: { uiLogo, uiLogin },
     created: function(){
-
     },
     data() {
         return {
@@ -84,6 +87,14 @@ export default {
         };
     },
     methods: {
+        onScroll: function(){
+            console.info("x,y1");
+        },
+        onHide: function(){
+            if(this.isShowNavList){
+                this.isShowNavList = false;   
+            }
+        },
         onNavItemClick: function(i, j){
             var item = null;
             if(this.navList[i] && this.navList[i].items && this.navList[i].items[j]){
